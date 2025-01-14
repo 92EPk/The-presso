@@ -57,18 +57,37 @@ npm run dev
 ```
 The application will be launched at [http://localhost:3000](http://localhost:3000).
 
-## Project Structure
+### Project Structure
 
-The project structure is organized for scalability and ease of navigation. Key directories include:
+-   **Root Directory**
 
-- **pages/**: Contains the routes of the application
-- **components/**: Reusable components such as headers, footers, and blog cards
-- **styles/**: Global and component-specific styles
-- **lib/**: Contains utility functions and database queries
+    -   `jsconfig.json`: Configuration file for JavaScript projects.
+    -   `next.config.js`: Configuration file specific to Next.js to manage the project settings.
+    -   `package.json`: The manifest file for npm, includes dependencies and scripts.
+    -   `prisma/schema.prisma`: Structure of the database schema for Prisma.
+    -   `public/`: Contains static assets like images and icons.
+        -   Images used in the project, such as logos and icons for social media.
+    -   `src/`: Main source folder containing all application logic and components.
+-   **App Directory** (`src/app`)
 
-## Application Demo
+    -   **API Routes** (`api/`): Handle backend functionalities such as authentication, fetching posts, and comments.
 
-You can check out the live demo of the application [here](provide your live demo link if applicable).
+        -   `auth/`: Contains NextAuth.js configuration for handling user authentication.
+        -   `posts/`: CRUD operations related to blog posts and fetching specific post details by slug.
+        -   `comments/`: API endpoints for managing comments on posts.
+        -   `categories/`: Endpoints for managing blog categories.
+        -   `featured/`: Endpoints for handling featured posts.
+    -   **Pages**: Various pages for the application including writing new posts, viewing specific posts, login, and user author pages.
+
+        -   Each page has its own CSS module for styling.
+-   **Components Directory** (`src/components`)
+
+    -   Modular React components representing different UI parts of the application like Navbar, Footer, Post Cards, Category List, and Comments. Using CSS modules for scoped styles.
+-   **Context Directory** (`src/context`): Implements React's Context API for managing themes, providing dark/light mode functionality throughout the app.
+
+-   **Providers Directory** (`src/providers`): Houses provider components for authentication and theme.
+
+-   **Utils Directory** (`src/utils`): Utility functions for authentication, database connection, and Firebase integration.
 
 ## Future Improvements
 
