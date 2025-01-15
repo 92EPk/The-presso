@@ -1,0 +1,26 @@
+.container {
+    flex: 2;
+    margin-top: 60px;
+  }
+  
+  .subtitle {
+    color: gray;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .title {
+    font-size: 28px;
+  }
+  
+  .sidebar{
+    overflow: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2%;
+  }
+  
+  /* @media screen and (max-width: 1024px) {
+    .container {
+      display: none;
+    }
+  } */
