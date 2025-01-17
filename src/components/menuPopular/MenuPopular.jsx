@@ -78,7 +78,7 @@ const MenuPopular = async () => {
             {/* Display the post creation date */}
             <div className={styles.detail}>
               <span className={styles.date}>
-                {post?.createdAt?.substring(0, 10)} // Display only the date part
+                {post?.createdAt?.substring(0, 10)} {/* Display only the date part */}
               </span>
             </div>
           </div>

@@ -31,13 +31,13 @@ const MenuPosts = async () => {
   if (!Array.isArray(posts) || posts.length === 0) {
     return (
       <div className={styles.items}>
-        <p>No editor's choice posts available at the moment.</p>
+        <p>No editor&apos;s choice posts available at the moment.</p>
       </div>
     );
   }
 
   return (
-    // Container for the list of editor's choice posts
+    // Container for the list of editor&apos;s choice posts
     <div className={styles.items}>
       {/* Map through the posts and render each post as a link */}
       {posts.map((post) => (
@@ -71,7 +71,7 @@ const MenuPosts = async () => {
             {/* Display the post creation date */}
             <div className={styles.detail}>
               <span className={styles.date}>
-                {post?.createdAt?.substring(0, 10)} // Display only the date part
+                {post?.createdAt?.substring(0, 10)} {/* Display only the date part */}
               </span>
             </div>
           </div>
